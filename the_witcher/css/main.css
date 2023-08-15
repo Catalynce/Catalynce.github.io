@@ -9,6 +9,11 @@ html, body{
   background-color: black;
 }
 
+:root{
+  --index: calc(1vw + 1vh)
+}
+
+
 .slider {
   height: 100%;
 }
@@ -35,4 +40,27 @@ html, body{
 .slider__wrapper{
   will-change: transform;
   transform-style: preserve-3d;
+}
+
+@media (max-width: 700px) {
+
+  .slider__layer{
+    background-position: calc(var(--index) * 28 * -1);
+  }
+
+  .layer--2{
+    background-position: calc(var(--index) * 32 * -1);
+  }
+}
+
+@media (max-width: 550px) {
+  .layer--2{
+    background-position: calc(var(--index) * 40 * -1);
+  }
+}
+
+@media (max-width: 420px) {
+  .layer--2{
+    background-position: calc(var(--index) * 48 * -1);
+  }
 }
